@@ -12,9 +12,6 @@ branches:
 #       build configuration       #
 #---------------------------------#
 
-install:
-    - nuget restore
-
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
 platform: Any CPU
 
@@ -27,3 +24,6 @@ build:
 
   # MSBuild verbosity level
   verbosity: detailed
+  
+before_build:
+    - nuget restore
