@@ -1,0 +1,26 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: Any CPU
+
+# build Configuration, i.e. Debug, Release, etc.
+configuration: Release
+
+build:
+  project: AppVeyorTest.sln      # path to Visual Studio solution or project
+  publish_wap: true              # package Web Application Projects (WAP) for Web Deploy
+
+  # MSBuild verbosity level
+  verbosity: detailed
